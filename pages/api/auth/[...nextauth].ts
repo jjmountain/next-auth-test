@@ -115,7 +115,6 @@ export const authOptions: NextAuthOptions = {
       if (token.error) {
         session.error = token.error;
       }
-      console.log("session", session);
       return session;
     }
   }
