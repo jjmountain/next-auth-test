@@ -1,5 +1,4 @@
 import React from "react";
-import type { NextPageWithLayout } from "./_app";
 import Layout from "../components/layout";
 import type { ReactElement } from "react";
 import type { GetServerSidePropsContext } from "next";
@@ -7,14 +6,8 @@ import type { Session } from "next-auth";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "./api/auth/[...nextauth]";
 
-export default function IndexPage({
-  session
-}: {
-  session: Session;
-}): NextPageWithLayout {
-  // @ts-ignore
-
-  console.log("session", session);
+export default function IndexPage({ session }: { session: Session }) {
+  console.log("session is here", session);
   return (
     <>
       <h1>NextAuth.js Example</h1>
